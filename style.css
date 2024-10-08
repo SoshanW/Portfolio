@@ -1,19 +1,45 @@
+:root{
+  --header-background-color: rgb(32, 32, 32);
+  --hover-effect-color: #83edf5
+}
+
 body{
   font-family: Roboto, Arial;
   margin: 0;
 }
 
 nav {
-  background-color: #ced4da;
+  background-color: var(--header-background-color);
   padding: 7px;
   text-align: center;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   flex: 1;
   position: fixed;
   top: 0;
   right: 0;
   left: 0;
+}
+
+.right-section{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 400;
+}
+
+.left-section p{
+  color: white;
+  padding-left: 25px;
+  font-family: 'Courier New', Courier, monospace;
+  cursor: pointer;
+  transition: color 0.5s;
+  font-weight: 600;
+}
+
+.left-section p:hover{
+  color: var(--hover-effect-color);
 }
 
 nav ul {
@@ -32,11 +58,62 @@ nav a {
 }
 
 nav a:hover{
-  color: antiquewhite;
+  color: var(--hover-effect-color);
 }
 
 .banner{
   margin-top: 64px;
-  background-color: #ced4da;
-  padding: 33vh;
+  background-color: var(--header-background-color);
+  padding-top: 80px;
+  padding-bottom: 230px;
+  display: grid;
+  grid-template-columns: 750px 1fr;
+  color: white; 
+
+}
+
+.left-side-banner{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 100px;
+  flex: 1;
+}
+
+.left-side-banner h2{
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 40px;
+  text-align: center;
+}
+
+.right-side-banner{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 60px 0 0;
+}
+
+.pfp{
+  display:flex;
+  height: 300px;
+  border-radius: 150px;
+  margin-right: 100px;
+}
+
+.more-button{
+  margin-top: 30px;
+  padding: 10px 30px;
+  border-radius: 20px;
+  border: 2px solid;
+  cursor: pointer;
+  font-family: Arial;
+  font-weight: 600;
+  transition: background-color 0.5s, font-family 1s;
+}
+
+.more-button:hover{
+  background-color: var(--hover-effect-color);
+  font-family: 'Courier New', Courier, monospace;
+  color: black;
+  font-weight: bold;
 }
