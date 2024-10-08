@@ -1,0 +1,42 @@
+body{
+  font-family: Roboto, Arial;
+  margin: 0;
+}
+
+nav {
+  background-color: #ced4da;
+  padding: 7px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex: 1;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+}
+
+nav ul li{
+  margin-right: 70px;;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  transition: color 0.5s;
+}
+
+nav a:hover{
+  color: antiquewhite;
+}
+
+.banner{
+  margin-top: 64px;
+  background-color: #ced4da;
+  padding: 33vh;
+}
