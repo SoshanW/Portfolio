@@ -25,7 +25,6 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: 'Courier New', Courier, monospace;
   font-weight: 400;
 }
 
@@ -65,7 +64,7 @@ nav a:hover{
   margin-top: 64px;
   background-color: var(--header-background-color);
   padding-top: 80px;
-  padding-bottom: 230px;
+  padding-bottom: 95px;
   display: grid;
   grid-template-columns: 750px 1fr;
   color: white; 
@@ -84,6 +83,60 @@ nav a:hover{
   font-family: 'Courier New', Courier, monospace;
   font-size: 40px;
   text-align: center;
+}
+
+.animated-text span{
+  position: relative;
+}
+
+.animated-text span::before{
+  content: "Developer";
+  color: var(--hover-effect-color);
+  animation: words 20s infinite;
+}
+
+.animated-text span::after{
+  content: "";
+  position: absolute;
+  width: calc(100%+ 8px);
+  height: 100%;
+  background-color: var(--header-background-color);
+  border-left: 2px solid var(--hover-effect-color);
+  right: -8px;
+  animation: cursor .8s infinite, typing 20s steps(14) infinite;
+}
+
+@keyframes cursor{
+  to{
+    border-left: 2px solid var(--header-background-color);
+  }
+}
+
+@keyframes words{
+  0%, 20%{
+    content: "Developer";
+  }
+  21%, 40%{
+    content: "Designer";
+  }
+  41%, 60%{
+    content: "Gamer";
+  }
+  61%, 80%{
+    content: "Musician";
+  }
+  81%, 100%{
+    content: "BackEnd Dev";
+  }
+}
+
+@keyframes typing {
+  10%,15%,30%,35%,50%,55%,70%,75%,90%,95%{
+    width: 0;
+  }
+  5%,20%,25%,40%,45%,60%,65%,80%,85%,100%{
+    width: calc(100% + 8px);
+  }
 }
 
 .right-side-banner{
@@ -116,4 +169,9 @@ nav a:hover{
   font-family: 'Courier New', Courier, monospace;
   color: black;
   font-weight: bold;
+}
+
+.next{
+  padding-bottom: 700px;
+  background-color: #272828;
 }
