@@ -19,6 +19,7 @@ nav {
   top: 0;
   right: 0;
   left: 0;
+  border-bottom: 1px solid rgb(63, 63, 63);
 }
 
 .right-section{
@@ -34,7 +35,9 @@ nav {
   font-family: 'Courier New', Courier, monospace;
   cursor: pointer;
   transition: color 0.5s;
-  font-weight: 600;
+  font-weight: 500;
+  font-size: 16px;
+  margin-left: 20px;
 }
 
 .left-section p:hover{
@@ -79,6 +82,11 @@ nav a:hover{
   flex: 1;
 }
 
+/* .name-title{
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 25px;
+} */
+
 .left-side-banner h2{
   font-family: 'Courier New', Courier, monospace;
   font-size: 40px;
@@ -92,7 +100,7 @@ nav a:hover{
 .animated-text span::before{
   content: "Developer";
   color: var(--hover-effect-color);
-  animation: words 20s infinite;
+  animation: words 14s infinite;
 }
 
 .animated-text span::after{
@@ -103,7 +111,7 @@ nav a:hover{
   background-color: var(--header-background-color);
   border-left: 2px solid var(--hover-effect-color);
   right: -8px;
-  animation: cursor .8s infinite, typing 20s steps(14) infinite;
+  animation: cursor .6s infinite, typing 14s steps(14) infinite;
 }
 
 @keyframes cursor{
@@ -151,6 +159,13 @@ nav a:hover{
   height: 300px;
   border-radius: 150px;
   margin-right: 100px;
+  border: 3px solid var(--hover-effect-color);
+  transition: border 0.2s;
+  cursor: pointer;
+}
+
+.pfp:hover{
+  border: 6px solid var(--hover-effect-color);
 }
 
 .more-button{
@@ -171,7 +186,35 @@ nav a:hover{
   font-weight: bold;
 }
 
-.next{
-  padding-bottom: 700px;
+.socials-section{
   background-color: #272828;
+  color: white;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 0 50px 300px 50px;
+}
+
+.socials-container{
+  margin: 100px 20px 20px 20px;
+  border-radius: 6px;
+  border: 2px solid var(--hover-effect-color);
+  padding-bottom: 100px;
+  display: flex;
+  align-items: center;
+}
+
+.socials{
+  filter: invert(1);
+  display: flex;
+  margin-top: 40px;
+  position: relative;
+  right: 180px;
+}
+
+.socials img{
+  margin-left: 20px;
+  height: 30px;
+  border: 3px;
+  box-shadow: 0px 5px 10px rgba(2, 2, 2, 0.1);
+  cursor: pointer;
 }
