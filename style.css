@@ -20,6 +20,7 @@ nav {
   right: 0;
   left: 0;
   border-bottom: 1px solid rgb(63, 63, 63);
+  z-index: 100;
 }
 
 .right-section{
@@ -63,10 +64,14 @@ nav a:hover{
   color: var(--hover-effect-color);
 }
 
+.active{
+  color: var(--hover-effect-color);
+}
+
 .banner{
   margin-top: 64px;
   background-color: var(--header-background-color);
-  padding-top: 80px;
+  padding-top: 30px;
   padding-bottom: 95px;
   display: grid;
   grid-template-columns: 750px 1fr;
@@ -76,21 +81,31 @@ nav a:hover{
 
 .left-side-banner{
   display: flex;
-  flex-direction: column;
+  flex-direction: column; 
   align-items: center;
-  margin: 0 100px;
+  margin: 0 50px;
   flex: 1;
 }
 
-/* .name-title{
-  font-family: 'Courier New', Courier, monospace;
-  font-size: 25px;
-} */
+.name-title{
+  font-family: "Inter", sans-serif;
+  font-weight: 800;
+  font-size: 35px;
+  text-align: center;
+  margin-bottom: -40px;
+}
 
 .left-side-banner h2{
   font-family: 'Courier New', Courier, monospace;
-  font-size: 40px;
-  text-align: center;
+  font-size: 50px;
+  text-align: center;  
+}
+
+.left-side-banner p{
+  margin-top: 0;
+  color: aliceblue;
+  font-size: 17px;
+  line-height: 26px;
 }
 
 .animated-text span{
@@ -122,19 +137,19 @@ nav a:hover{
 
 @keyframes words{
   0%, 20%{
-    content: "Developer";
+    content: "Front-End Dev";
   }
   21%, 40%{
-    content: "Designer";
+    content: "Back-End Dev";
   }
   41%, 60%{
-    content: "Gamer";
-  }
-  61%, 80%{
     content: "Musician";
   }
+  61%, 80%{
+    content: "Gamer";
+  }
   81%, 100%{
-    content: "BackEnd Dev";
+    content: "Alcoholic";
   }
 }
 
@@ -152,16 +167,18 @@ nav a:hover{
   flex-direction: column;
   align-items: center;
   margin: 0 60px 0 0;
+  justify-content: center;
 }
 
 .pfp{
   display:flex;
-  height: 300px;
-  border-radius: 150px;
+  height: 400px;
+  border-radius: 50px;
   margin-right: 100px;
   border: 3px solid var(--hover-effect-color);
-  transition: border 0.2s;
+  transition: border 0.1s;
   cursor: pointer;
+  margin-bottom: 200px;
 }
 
 .pfp:hover{
@@ -170,13 +187,13 @@ nav a:hover{
 
 .more-button{
   margin-top: 30px;
-  padding: 10px 30px;
-  border-radius: 20px;
+  padding: 20px 40px;
+  border-radius: 30px;
   border: 2px solid;
   cursor: pointer;
   font-family: Arial;
   font-weight: 600;
-  transition: background-color 0.5s, font-family 1s;
+  transition: background-color 0.3s, transform 0.3s;
 }
 
 .more-button:hover{
@@ -184,6 +201,7 @@ nav a:hover{
   font-family: 'Courier New', Courier, monospace;
   color: black;
   font-weight: bold;
+  transform: scale(1.1);
 }
 
 .socials-section{
@@ -204,17 +222,27 @@ nav a:hover{
 }
 
 .socials{
-  filter: invert(1);
   display: flex;
-  margin-top: 40px;
-  position: relative;
-  right: 180px;
+  margin-top: 50px;
+}
+
+.svg-container{
+  display: flex;
+  justify-content: space-between;
+  padding: 0 15px 0 15px;
 }
 
 .socials img{
-  margin-left: 20px;
+  filter: invert(1) brightness(0.7);
   height: 30px;
   border: 3px;
   box-shadow: 0px 5px 10px rgba(2, 2, 2, 0.1);
   cursor: pointer;
+  padding: 10px 10px 10px 10px; 
+  transition: transform 0.15s;
+}
+
+.socials img:hover{
+  filter: invert(1);
+  transform: translateY(-5px) scale(1.05)
 }
