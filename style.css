@@ -278,7 +278,7 @@ nav a:hover{
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1); 
     transition: background-image 5s;
-    line-height: 29px;
+    line-height: 30px;
 }
 
 .about-containers:hover{
@@ -301,4 +301,71 @@ nav a:hover{
 
 .about-containers h2,h3{
   text-align: center;
+}
+
+
+/* feedback form code */
+.contact-body {
+  background-color: var(--header-background-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 99px;
+}
+
+.feedback-container {
+  border: 3px solid var(--hover-effect-color);
+  background-color: transparent;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  width: px;
+  color: aliceblue;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 8px 0px;
+  margin-bottom: 15px;
+  border: 3px solid var(--hover-effect-color);
+  border-radius: 5px;
+}
+
+.satisfaction-scale {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.satisfaction-scale input[type="radio"] {
+  margin-right: 5px;
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 10px;
+  background-color: rgb(23, 90, 149);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: Roboto, 'Arial';
+  transition: background-color 0.2s;
+}
+
+.submit-btn:hover {
+  background-color: #113553;
 }
