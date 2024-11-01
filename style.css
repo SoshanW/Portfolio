@@ -8,7 +8,7 @@ body{
   margin: 0;
   background-color: var(--header-background-color);
 }
-
+/* nav-bar code START */
 nav {
   background-color: var(--header-background-color);
   padding: 7px;
@@ -69,6 +69,9 @@ nav a:hover{
   color: var(--hover-effect-color);
 }
 
+/* nav-bar code END */
+
+/* Home page code START */
 .banner{
   margin-top: 64px;
   background-color: var(--header-background-color);
@@ -257,7 +260,9 @@ nav a:hover{
   transform: translateY(-5px) scale(1.05);
   background-image: linear-gradient(to bottom right, rgb(228, 228, 228), rgb(188, 187, 187));
 }
+/* Home Page code END */
 
+/* About Page code START */
 .about-main{
     padding: 2em;
     max-width: 1200px;
@@ -302,7 +307,7 @@ nav a:hover{
 .about-containers h2,h3{
   text-align: center;
 }
-
+/* About Page code END */
 
 /* feedback form code */
 .contact-body {
@@ -319,7 +324,7 @@ nav a:hover{
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-  width: px;
+  width: 30%;
   color: aliceblue;
 }
 
@@ -354,32 +359,30 @@ input:user-valid{
   border-color: var(--hover-effect-color);
 }
 
-
-.satisfaction-scale {
+.submit-btn-container{
   display: flex;
-  justify-content: space-between;
-  margin-bottom: 20px;
+  justify-content: center;
 }
 
-.satisfaction-scale input[type="radio"] {
-  margin-right: 5px;
-}
-
-.submit-btn {
-  width: 100%;
+.submit-btn-container button{
+  width: 50%;
+  border-radius: 60px;
   padding: 10px;
-  background-color: rgb(23, 90, 149);
-  color: white;
+  background-color: rgb(200, 201, 202);
+  color: black;
   border: none;
-  border-radius: 5px;
   cursor: pointer;
   font-family: Roboto, 'Arial';
   transition: background-color 0.2s;
+  font-weight: 600
 }
 
 .submit-btn:hover {
-  background-color: #113553;
+  background-color: var(--hover-effect-color);
+  color: black;
 }
+
+/* feedback form code END */
 
 /* blog sction css code START */
 .my-projects-section{
@@ -453,6 +456,13 @@ input:user-valid{
   margin: 0 20px;
 }
 
+.blog-posts-card time{
+  color: skyblue;
+  font-size: 18px;
+  font-style: italic;
+}
+
+
 .github-info-container{
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -478,6 +488,88 @@ input:user-valid{
   background-color: var(--hover-effect-color);
 }
 
-
-
 /* blog section css code END */
+
+@media screen and (max-width:1040px){
+  .blog-posts-grid{
+    grid-template-columns: 1fr 1fr;
+  }
+  .my-projects h1{
+    font-size:40px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    margin-top: 50px;
+  }
+  
+  .my-projects p{
+    font-size: 18px;
+    font-weight: 400;
+  }
+
+  .feedback-container {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width:690px){
+
+  /* blog page START */
+  .blog-posts-grid{
+    grid-template-columns: 1fr;
+  }
+  .my-projects h1{
+    font-size:30px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    margin-top: 90px;
+  }
+  
+  .my-projects p{
+    font-size: 15px;
+    font-weight: 400;
+    text-align: center;
+    margin: 10px 20px;
+  }
+  .blog-posts-card h2{
+    font-size: 20px;
+  }
+
+  .blog-posts-card img{
+    width: 60%;
+  }
+
+  .github-info-container img{
+    width: 35px;
+    margin-left: 15px;
+  }
+  .github-info-container button{
+    padding: 8px 20px 8px 20px;
+  }
+
+  /* blog page END */
+
+  /* contact page START */
+    .feedback-container{
+      width: 50%;
+    }
+
+    .feedback-container h2{
+      font-size: 18px;
+    }
+    .feedback-container label{
+      font-size: 14px;
+    }
+
+    .submit-btn-container{
+      display: flex;
+      justify-content: center;
+    }
+
+    .submit-btn-container button{
+      width: 50%;
+      border-radius: 30px;
+
+    }
+  /* contact page END */
+  
+}
