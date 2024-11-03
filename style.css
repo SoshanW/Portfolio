@@ -10,66 +10,6 @@ body{
 }
 /* nav-bar code START */
 
-/* nav {
-  background-color: var(--header-background-color);
-  padding: 7px;
-  text-align: center;
-  display: flex;
-  justify-content: space-between;
-  flex: 1;
-  position: fixed;
-  top: 0;
-  right: 0;
-  left: 0;
-  border-bottom: 1px solid rgb(63, 63, 63);
-  z-index: 100;
-}
-
-.right-section{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-weight: 400;
-}
-
-.left-section p{
-  color: white;
-  padding-left: 25px;
-  font-family: 'Courier New', Courier, monospace;
-  cursor: pointer;
-  transition: color 0.5s;
-  font-weight: 500;
-  font-size: 16px;
-  margin-left: 20px;
-}
-
-.left-section p:hover{
-  color: var(--hover-effect-color);
-}
-
-nav ul {
-  list-style: none;
-  display: flex;
-}
-
-nav ul li{
-  margin-right: 70px;;
-}
-
-nav a {
-  text-decoration: none;
-  color: white;
-  transition: color 0.5s;
-}
-
-nav a:hover{
-  color: var(--hover-effect-color);
-}
-
-.active{
-  color: var(--hover-effect-color);
-} */
-
 nav{
   display: flex;
   justify-content: space-between;
@@ -85,7 +25,7 @@ nav{
   font-size: 20px;
   display: flex;
   align-items: center;
-  margin-left: 80px;
+  margin-left: 40px;
   cursor:pointer;
 }
 
@@ -102,7 +42,7 @@ nav{
 .nav-links{
   display: flex;
   gap: 2rem;
-  margin-right: 80px;
+  margin-right: 40px;
 }
 
 .nav-links a{
@@ -119,10 +59,16 @@ nav{
   border-radius: 5px;
 }
 
+.nav-links a.active {
+  color: var(--hover-effect-color);
+  border-radius: 5px;
+}
+
 .menu-icon{
   display: none;
   cursor: pointer;
   z-index: 1000;
+  margin-right: 30px;
 }
 
 .menu-icon div{
@@ -160,7 +106,12 @@ nav{
   color: var(--hover-effect-color);
 }
 
-@media screen and (max-width: 768px) {
+.sidebar a:active{
+  color: var(--hover-effect-color);
+}
+
+
+@media screen and (max-width: 800px) {
   .nav-links {
       display: none;
   }
@@ -182,6 +133,7 @@ nav{
 .menu-icon.change .bar3 {
   transform: translateY(-10px) rotate(-45deg);
 }
+
 
 
 /* nav-bar code END */
@@ -499,7 +451,6 @@ input:user-valid{
 
 /* blog sction css code START */
 .my-projects-section{
-  margin-top: 65px;
   display: flex;
   justify-content: center;
 }
@@ -634,7 +585,7 @@ input:user-valid{
     font-size:30px;
     font-weight: 600;
     margin-bottom: 20px;
-    margin-top: 90px;
+    margin-top: 40px;
   }
   
   .my-projects p{
