@@ -22,7 +22,7 @@ nav{
 
 .logo-section{
   font-family: 'Courier New', Courier, monospace;
-  font-size: 16px;
+  font-size: 17px;
   display: flex;
   align-items: center;
   margin-left: 40px;
@@ -33,6 +33,7 @@ nav{
   text-decoration: none;
   color: black;
   transition: color 0.5s;
+  font-weight: bold;
 }
 
 .logo-section a:hover{
@@ -45,20 +46,28 @@ nav{
   margin-right: 40px;
 }
 
+.nav-links > a { 
+  font-weight: bold;
+}
+
 .nav-links a{
   color: black;
   text-decoration: none;
-  font-size: 15px;
+  font-size: 17px;
   padding: 10px 15px;
   transition: color 0.5s ease;
 }
 
-.nav-links a:hover{
-  color: var(--hover-effect-color);
-  border-radius: 5px;
+.nav-links a:not(.active) { 
+  color: #555; 
 }
 
 .nav-links a.active {
+  font-weight: bold; 
+  color: var(--hover-effect-color); 
+}
+
+.nav-links a:hover{
   color: var(--hover-effect-color);
   border-radius: 5px;
 }
@@ -97,18 +106,22 @@ nav{
   font-size: 17px;
   color: black;
   display: block;
-  transition: 0.3s;
+  transition: color 0.3s;
   margin: 15px 0;
+}
+
+.sidebar a:not(.active) {
+  color: #555; 
+}
+
+.sidebar a.active {
+  font-weight: bold;
+  color: var(--hover-effect-color)
 }
 
 .sidebar a:hover{
   color: var(--hover-effect-color);
 }
-
-.sidebar a.active{
-  color: var(--hover-effect-color);
-}
-
 
 @media screen and (max-width: 800px) {
   .nav-links {
@@ -155,7 +168,10 @@ nav{
   margin: 0 70px;
   padding-left: 130px;
 }
-
+.left-side-banner > *:first-child { /* Structural selector */
+  font-weight: bold; /* Example style for the first child */
+  color: #4a90e2; /* Change color for emphasis */
+}
 .name-title{
   font-family: "Inter", sans-serif;
   font-weight: 800;
@@ -297,7 +313,9 @@ nav{
   display: flex;
   align-items: center;
 }
-
+.socials > :first-child { /* Example structural selector */
+  color: #4a90e2; /* Example style for the first child */
+}
 .socials{
   display: flex;
   margin-top: 35px;
@@ -459,16 +477,20 @@ label {
   font-weight: bold;
 }
 
-input[type="text"],
-input[type="email"],
-textarea {
+input[type="text"], textarea {
   width: 100%;
   padding: 8px 0px;
   margin-bottom: 15px;
   border: 3px solid var(--hover-effect-color);
   border-radius: 5px;
 }
-
+input[type="email"]{
+  width: 100%;
+  padding: 8px 0px;
+  margin-bottom: 15px;
+  border: 3px solid var(--hover-effect-color);
+  border-radius: 5px;
+}
 /* user-invalid and user-valid are new validation psuedo classes makes the code interactive without JS  */
 
 input:user-invalid{
@@ -726,6 +748,7 @@ input:user-valid{
   font-size: 1.8em;
 }
 
+
 .skills h3, .music h3{
   color: #9013fe;
   margin-bottom: 40px;
@@ -742,6 +765,7 @@ input:user-valid{
   padding: 0;
 }
 
+
 .skills ul li {
   margin: 5px 0;
   padding: 5px;
@@ -752,6 +776,11 @@ input:user-valid{
 .skills ul li:hover {
   background: #f1f1f1;
 }
+
+.skills ul li:nth-child(2n) { 
+  background-color: #e7e7e7; 
+}
+
 
 @media screen and (max-width: 600px) {
 
