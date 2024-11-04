@@ -565,7 +565,7 @@ input:user-valid{
 .blog-posts-card{
   border: 2px solid var(--hover-effect-color);
   border-radius: 20px;
-  background-color: #f8f8f8;
+  background-color: rgba(248, 248, 248, 0.435);
   color: black;
   display: flex;
   flex-direction: column;
