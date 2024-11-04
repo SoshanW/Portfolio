@@ -1,10 +1,10 @@
 :root{
-  --header-background-color: rgb(32, 32, 32);
-  --hover-effect-color: #83edf5
+  --header-background-color: #fbf81;
+  --hover-effect-color: #4a90e2;
 }
 
 body{
-  font-family: Roboto, Arial;
+  font-family: "Roboto", Arial;
   margin: 0;
   background-color: var(--header-background-color);
 }
@@ -16,7 +16,7 @@ nav{
   align-items: center;
   background-color: var(--header-background-color);
   padding: 0.3rem;
-  color: aliceblue;
+  color: black;
   border-bottom: 1px solid rgb(63, 63, 63);
 }
 
@@ -31,7 +31,7 @@ nav{
 
 .logo-section a{
   text-decoration: none;
-  color: aliceblue;
+  color: black;
   transition: color 0.5s;
 }
 
@@ -46,7 +46,7 @@ nav{
 }
 
 .nav-links a{
-  color: aliceblue;
+  color: black;
   text-decoration: none;
   font-size: 15px;
   padding: 10px 15px;
@@ -73,7 +73,7 @@ nav{
 .menu-icon div{
   width: 20px;
   height: 2px;
-  background-color: aliceblue;
+  background-color: black;
   margin: 6px 0;
   transition: all 0,3s ease-in-out;
 }
@@ -85,7 +85,7 @@ nav{
   z-index: 999;
   top: 0;
   right:0;
-  background-color: var(--header-background-color);
+  background-color: rgb(242, 242, 242);
   overflow-x: hidden;
   transition: 0.5s;
   padding-top: 60px;
@@ -95,7 +95,7 @@ nav{
   padding: 16px 32px;
   text-decoration: none;
   font-size: 17px;
-  color: #818181;
+  color: black;
   display: block;
   transition: 0.3s;
   margin: 15px 0;
@@ -105,7 +105,7 @@ nav{
   color: var(--hover-effect-color);
 }
 
-.sidebar a:active{
+.sidebar a.active{
   color: var(--hover-effect-color);
 }
 
@@ -139,11 +139,11 @@ nav{
 .banner{
   margin-top: 40px;
   background-color: var(--header-background-color);
-  padding-bottom: 95px;
+  padding-bottom: 30px;
   display: grid;
   grid-template-columns: 750px 1fr;
   grid-template-areas: "left right";
-  color: white; 
+  color: black; 
 
 }
 
@@ -162,12 +162,12 @@ nav{
   font-size: 30px;
   text-align: center;
   margin-bottom: -40px;
-  color: rgb(224, 224, 224);
+  color: black(224, 224, 224);
 }
 
 .name{
   font-size: 50px;
-  color: white;
+  color: black;
 }
 
 .left-side-banner h2{
@@ -177,7 +177,7 @@ nav{
 }
 
 .left-side-banner p{
-  color: rgb(224, 224, 224);
+  color: black;
   font-size: 15px;
   line-height: 24px;
   margin: 10px 10px 0px 10px;
@@ -199,7 +199,7 @@ nav{
   position: absolute;
   width: calc(100%+ 8px);
   height: 100%;
-  background-color: var(--header-background-color);
+  background-color: rgb(255, 255, 255);
   border-left: 2px solid var(--hover-effect-color);
   right: -8px;
   animation: cursor .6s infinite, typing 14s steps(14) infinite;
@@ -258,11 +258,12 @@ nav{
   margin-bottom: 60px;
 }
 .pfp:hover{
-  border: 6px solid gray;
+  border: 4px solid #333;
 }
 
 .more-button{
-  margin-top: 30px;
+  margin-top: 40px;
+  margin-bottom: 10px;
   padding: 15px 30px;
   border-radius: 30px;
   border: 2px solid;
@@ -273,9 +274,9 @@ nav{
 }
 
 .more-button:hover{
-  background-color: var(--hover-effect-color);
+  background-color: #333;
   font-family: 'Courier New', Courier, monospace;
-  color: black;
+  color: aliceblue;
   font-weight: bold;
   transform: scale(1.1);
 }
@@ -309,7 +310,6 @@ nav{
 }
 
 .socials img{
-  filter: invert(1) brightness(0.7);
   height: 30px;
   border: 3px;
   box-shadow: 0px 5px 10px rgba(2, 2, 2, 0.1);
@@ -380,7 +380,7 @@ nav{
 /* Home Page code END */
 
 /* About Page code START */
-.about-main{
+/* .about-main{
     padding: 2em;
     max-width: 1200px;
     margin-top: 80px;
@@ -423,7 +423,7 @@ nav{
 
 .about-containers h2,h3{
   text-align: center;
-}
+} */
 /* About Page code END */
 
 /* feedback form code */
@@ -440,21 +440,22 @@ nav{
 .feedback-container {
   border: 3px solid var(--hover-effect-color);
   background-color: transparent;
-  padding: 20px;
+  padding: 32px;
   border-radius: 10px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-  width: 30%;
-  color: aliceblue;
+  width: 5%;
+  color: black;
 }
 
-h2 {
+.feedback-container h2 {
   text-align: center;
   margin-bottom: 20px;
+  font-size: 20px;
 }
 
 label {
   display: block;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
   font-weight: bold;
 }
 
@@ -487,7 +488,7 @@ input:user-valid{
   width: 50%;
   border-radius: 60px;
   padding: 10px;
-  background-color: rgb(200, 201, 202);
+  background-color: rgb(240, 240, 240);
   color: black;
   border: none;
   cursor: pointer;
@@ -497,8 +498,8 @@ input:user-valid{
 }
 
 .submit-btn:hover {
-  background-color: var(--hover-effect-color);
-  color: black;
+  background-color: #333;
+  color: aliceblue;
 }
 
 /* feedback form code END */
@@ -513,7 +514,7 @@ input:user-valid{
   display: flex;
   flex-direction: column;
   align-items: center;
-  color: aliceblue;
+  color: black;
 }
 
 .my-projects h1{
@@ -542,8 +543,8 @@ input:user-valid{
 .blog-posts-card{
   border: 2px solid var(--hover-effect-color);
   border-radius: 20px;
-  background-color: rgba(40, 43, 47, 0.676);
-  color: aliceblue;
+  background-color: #f8f8f8;
+  color: black;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -552,7 +553,7 @@ input:user-valid{
 
 .blog-posts-card:hover{
   transform: translateY(-5px) scale(1.01);
-  box-shadow: 0px 5px 10px rgba(255, 255, 255, 0.452);
+  box-shadow: 0px 5px 10px rgba(23, 23, 23, 0.452);
 }
 
 .blog-posts-card h2{
@@ -575,7 +576,7 @@ input:user-valid{
 }
 
 .blog-posts-card time{
-  color: skyblue;
+  color: var(--hover-effect-color);
   font-size: 16px;
   font-style: italic;
 }
@@ -590,7 +591,6 @@ input:user-valid{
   margin-top: -10px;
 }
 .github-info-container img{
-  filter: invert(1);
   width: 40px;
   margin-left: 30px;
 }
@@ -607,7 +607,8 @@ input:user-valid{
 }
 
 .github-info-container button:hover{
-  background-color: var(--hover-effect-color);
+  background-color: #333;
+  color:aliceblue;
 }
 
 /* blog section css code END */
@@ -667,35 +668,133 @@ input:user-valid{
   .github-info-container button{
     padding: 8px 20px 8px 20px;
   }
+}
 
-  /* blog page END */
+/* blog page END */
 
-  /* contact page START */
-    .feedback-container{
-      width: 50%;
-    }
+/* contact page START */
+.feedback-container{
+  width: 50%;
+}
 
-    .feedback-container h2{
-      font-size: 18px;
-    }
-    .feedback-container label{
-      font-size: 14px;
-    }
+.feedback-container h2{
+  font-size: 18px;
+}
+.feedback-container label{
+  font-size: 14px;
+}
 
-    .submit-btn-container{
-      display: flex;
-      justify-content: center;
-    }
+.submit-btn-container{
+  display: flex;
+  justify-content: center;
+}
 
-    .submit-btn-container button{
-      width: 50%;
-      border-radius: 30px;
-
-    }
-  /* contact page END */
-
-  /* about2 page START*/
-    
-  /* about2 page END*/
+.submit-btn-container button{
+  width: 50%;
+  border-radius: 30px;
 
 }
+/* contact page END */
+
+/* about2 page START*/
+
+.about-main {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 30px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.bio, .skills, .music {
+  margin-bottom: 30px;
+  padding: 20px;
+  border-radius: 8px;
+  background: #f9f9f9;
+  transition: background 0.3s, transform 0.3s;
+}
+
+.bio:hover, .skills:hover, .music:hover {
+  background: #eaeaea;
+  transform: translateY(-2px);
+}
+
+.about-main h2{
+  color: #4a90e2;
+  margin-bottom: 40px;
+  font-size: 1.8em;
+}
+
+.skills h3, .music h3{
+  color: #9013fe;
+  margin-bottom: 40px;
+  font-size: 1.5em;
+}
+
+.skills p, .music p, .about-main p{
+  line-height: 1.6;
+  font-size: 1.1em;
+}
+
+.skills ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.skills ul li {
+  margin: 5px 0;
+  padding: 5px;
+  border-left: 4px solid #4a90e2;
+  transition: background 0.3s;
+}
+
+.skills ul li:hover {
+  background: #f1f1f1;
+}
+
+@media screen and (max-width: 600px) {
+
+  .about-main {
+      padding: 15px;
+      margin: 15px;
+  }
+
+  .bio, .skills, .music {
+      padding: 10px;
+  }
+
+  .about-main h2{
+      font-size: 1.4em;
+  }
+
+  .skills h3, .music h3{
+      font-size: 1.2em;
+  }
+
+  .skills p, .music p, .about-main p {
+      font-size: 0.9em;
+  }
+
+  .skills ul li {
+      padding: 6px;
+  }
+
+}
+
+footer {
+  text-align: center;
+  padding: 10px 0;
+  background: #333;
+  color: #fff;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  margin-top: 40px;
+}
+
+footer p {
+  font-size: 0.9em;
+}  /* about2 page END*/
+
+
